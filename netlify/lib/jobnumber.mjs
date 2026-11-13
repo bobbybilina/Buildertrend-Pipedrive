@@ -10,7 +10,7 @@ import { getStore } from "@netlify/blobs";
 
 const API = "https://api.pipedrive.com/api/v2";
 const SB_FIELD = "c9ca265c02adc4099f30d861bb68223db75e085b"; // "JOB NUMBER"
-const PREFIX = process.env.JOB_PREFIX || "SB-";
+const PREFIX = process.env.JOB_PREFIX ?? "";
 const COUNTER_KEY = "last-issued";
 
 async function pd(path, opts = {}) {
